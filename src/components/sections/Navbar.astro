@@ -2,9 +2,9 @@
 //Import relevant dependencies
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
-import Authentication from "./Authentication.astro";
 import strings from "@utils/navigation.ts";
-import BrandLogo from "@components/BrandLogo.astro";
+import { Image } from "astro:assets";
+import logo from "@images/logo-sp.png";
 ---
 
 <!-- Main header component -->
@@ -23,7 +23,14 @@ import BrandLogo from "@components/BrandLogo.astro";
         href="/"
         aria-label="Brand"
       >
-        <BrandLogo class="h-auto w-24" />
+        <Image
+          src={logo}
+          alt={"Sumber Plafon Logo"}
+          class="h-auto w-20"
+          draggable={"false"}
+          format={"png"}
+          loading={"eager"}
+        />
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
@@ -85,8 +92,6 @@ import BrandLogo from "@components/BrandLogo.astro";
             <NavLink url={link.url} name={link.name} />
           ))
         }
-
-        <Authentication />
 
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">

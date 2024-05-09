@@ -2,22 +2,12 @@
 // Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
-import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
-import FAQ from "@components/sections/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
-import faqs from "@data/faqs.json";
-import features from "@data/features.json";
-import pricing from "@data/pricing.json";
-import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
+import heroImage from "@images/house-hero.png";
+import plafon from "@images/plafon.avif";
+import panel from "@images/panel.avif";
+import flooring from "@images/flooring.avif";
+import list from "@images/list.avif";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -28,118 +18,73 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
-
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
-    secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    title="SUMBER PLAFON PVC"
+    subTitle="Ruko Taman Narogong, Jl. Narogong Jaya Raya Blok TE 7, Pengasinan, Rawa Lumbu, Bekasi"
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
-  />
-
-  <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
-  />
-
-  <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
-    src={featureImage}
-    alt="ScrewFast products in floating boxes"
-    features={features}
+    alt="Sumber Plafon PVC"
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title="Temukan Produk PVC Unggulan dan Terpercaya"
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
+        heading: "SHUNDA PLAFON",
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+          "PVC untuk interior plafon rumah anda, dengan berbagai keunggulan antara lain: anti rayap, tahan air, tidak merambat api, pemasangan mudah, motif beragam, ramah lingkungan",
         svg: "tools",
-        src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+        src: plafon,
+        alt: "SHUNDA PLAFON",
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
+        heading: "SHUNDA PANEL",
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
-        second: true,
+          "PVC untuk mempercantik bagian bagian tertentu dirumah anda, berbagai keunggulan antara lain: tahan lama, ramah lingkungan, anti air, pemasangan mudah, tahan api, design menakjubkan dan beragam",
+        svg: "tools",
+        src: panel,
+        alt: "SHUNDA PANEL",
       },
       {
-        heading: "Robust Features",
+        heading: "SHUNDA WALL BOARD",
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+          "PVC untuk mempercantik dinding dirumah anda, menjadi lebih minimalis & modern. berbagai keunggulan SHUNDA WALL BOARD: instalasi mudah, anti air, perawatan mudah, ramah lingkungan, kuat dan tahan lama, design menakjubkan dan beragam",
+        svg: "tools",
+        src: panel,
+        alt: "SHUNDA WALL BOARD",
+      },
+      {
+        heading: "SHUNDA FLOORING",
+        content:
+          "Shunda Flooring menyediakan ribuan cara dalam mendesain rumah Anda dengan indah. Kami menawarkan polyboard bebas kayu yang menjadikan kami lebih ramah lingkungan. Ada yang menyebutnya lantai, ada pula yang menyebutnya fondasi untuk hidup berkualitas. Imajinasi adalah batas Anda!",
+        svg: "tools",
+        src: flooring,
+        alt: "SHUNDA FLOORING",
+      },
+      {
+        heading: "SHUNDA LIST PVC",
+        content:
+          "Shunda list, menyempurnakan setiap lekukan atau rongga di setiap sudut pemasangan SHUNDA Plafon dan produk  PVC lainnya. Dengan berbagai variasi dan model kekinian, SHUNDA LIST akan menyempurnakan penampilan setiap lekuk rumah anda",
+        svg: "tools",
+        src: list,
+        alt: "SHUNDA LIST PVC",
       },
     ]}
   />
-
-  <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
-    ;
-    testimonials={[
-      {
-        content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      },
-    ]}
-    statistics={[
-      {
-        count: "70k+",
-        description:
-          "customers equipped — from DIY to major construction firms",
-      },
-      {
-        count: "35%",
-        description:
-          "uptick in project efficiency with ScrewFast tools and services",
-      },
-      {
-        count: "15.3%",
-        description:
-          "reduction in maintenance costs reported by long-term clients",
-      },
-      {
-        count: "2x",
-        description: "quicker assembly using innovative fastening solutions",
-      },
-    ]}
-  />
-
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
-
-  <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+  <a
+    class="bg-green-500 fixed bottom-5 right-5 z-50 cursor-pointer rounded-full text-white"
+    href="https://wa.me/6285780900900"
+    target="_blank"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      class="bi bi-whatsapp h-14 w-14 md:h-16 md:w-16"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+      ></path>
+    </svg>
+  </a>
 </MainLayout>

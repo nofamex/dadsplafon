@@ -31,6 +31,7 @@ export default {
       }, // Primary colors, used mainly for links, buttons and svg icons
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow
+      green: colors.green,
     },
     extend: {},
   },
