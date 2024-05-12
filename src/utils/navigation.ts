@@ -5,8 +5,7 @@ const footerLinks = [
   {
     section: "Company",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Careers", url: "#" },
+      { name: "About us", url: "/about" },
       { name: "Customers", url: "#" },
     ],
   },

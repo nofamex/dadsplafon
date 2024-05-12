@@ -3,11 +3,13 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import ClientSection from "@components/sections/landing/ClientsSection.astro";
 import heroImage from "@images/house-hero.png";
 import plafon from "@images/plafon.avif";
 import panel from "@images/panel.avif";
 import flooring from "@images/flooring.avif";
 import list from "@images/list.avif";
+import wallboard from "@images/wallboard.avif";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -24,6 +26,8 @@ const avatarSrcs: Array<string> = [
     src={heroImage}
     alt="Sumber Plafon PVC"
   />
+
+  <ClientSection title="OUR PRODUCT" />
 
   <FeaturesNavs
     title="Temukan Produk PVC Unggulan dan Terpercaya"
@@ -50,7 +54,7 @@ const avatarSrcs: Array<string> = [
         content:
           "PVC untuk mempercantik dinding dirumah anda, menjadi lebih minimalis & modern. berbagai keunggulan SHUNDA WALL BOARD: instalasi mudah, anti air, perawatan mudah, ramah lingkungan, kuat dan tahan lama, design menakjubkan dan beragam",
         svg: "tools",
-        src: panel,
+        src: wallboard,
         alt: "SHUNDA WALL BOARD",
       },
       {
@@ -72,7 +76,7 @@ const avatarSrcs: Array<string> = [
     ]}
   />
   <a
-    class="bg-green-500 fixed bottom-5 right-5 z-50 cursor-pointer rounded-full text-white"
+    class="fixed bottom-5 right-5 z-50 cursor-pointer rounded-full bg-green-500 text-white"
     href="https://wa.me/6285780900900"
     target="_blank"
   >

@@ -1,0 +1,26 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+import whatsapp from "@images/whatsapp.svg";
+import email from "@images/email.svg";
+import instagram from "@images/instagram.svg";
+import building from "@images/building.svg";
+import Image from "astro/components/Image.astro";
+import ContactList from "@components/ui/ContactList.astro";
+
+const siteTitle = `About Us | ${SITE.title}`;
+---
+
+<MainLayout>
+  <section class="flex flex-col items-center justify-center gap-y-4 py-8">
+    <p class="text-2xl font-bold">ABOUT US</p>
+    <ContactList image={email} alt="email" text="sumberpvc@gmail.com" />
+    <ContactList image={whatsapp} alt="whatsapp" text="085-780-900900" />
+    <ContactList image={instagram} alt="instagram" text="Sumber.plafon" />
+    <ContactList
+      image={building}
+      alt="building"
+      text="Ruko Taman Narogong, Jl. Narogong Jalan Raya Blok TE, Pengasinan, Rawa Lumbu, Bekasi"
+    />
+  </section>
+</MainLayout>

@@ -1,0 +1,19 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  text: string;
+}
+
+const { image, alt, text } = Astro.props;
+---
+
+<div class="flex w-full items-center justify-between gap-x-4">
+  <div class="flex w-1/4 items-center justify-end">
+    <Image src={image} format="svg" alt={alt} class="h-10 w-10" />
+  </div>
+  <div class="h-auto w-3/4 text-lg">{text}</div>
+</div>
