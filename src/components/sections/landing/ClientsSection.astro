@@ -1,14 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import shunda from "@images/product/shunda.png";
-import ecofon from "@images/product/ecofon.png";
-import duma from "@images/product/duma.png";
-import alfafon from "@images/product/alfafon.png";
-import batikplafon from "@images/product/batikplafon.png";
-import envara from "@images/product/envara.png";
-import janur from "@images/product/janur.png";
-import pvcplank from "@images/product/pvcplank.png";
-import petrafone from "@images/product/petrafone.png";
+import ProductList from "@/components/react/ProductList";
 
 // Define props from Astro
 const { title, subTitle } = Astro.props;
@@ -38,26 +29,5 @@ interface Props {
       )
     }
   </div>
-  <div
-    class="mb-8 flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
-  >
-    <Image src={shunda} alt="shunda" format="png" class="h-32 w-32" />
-    <Image src={ecofon} alt="ecofon" format="png" class="h-32 w-32" />
-    <Image src={duma} alt="duma" format="png" class="h-32 w-32" />
-    <Image src={alfafon} alt="alfafon" format="png" class="h-32 w-32" />
-    <Image
-      src={batikplafon}
-      alt="batik plafon"
-      format="png"
-      class="h-32 w-32"
-    />
-    <Image src={envara} alt="envara" format="png" class="h-32 w-36" />
-  </div>
-  <div
-    class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
-  >
-    <Image src={janur} alt="janur" format="png" class="h-64 w-64" />
-    <Image src={pvcplank} alt="pvcplank" format="png" class="h-32 w-64" />
-    <Image src={petrafone} alt="petrafone" format="png" class="h-32 w-64" />
-  </div>
+  <ProductList client:only="react" />
 </section>
