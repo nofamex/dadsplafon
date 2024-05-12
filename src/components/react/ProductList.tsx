@@ -14,12 +14,12 @@ import petrafone from "@images/product/petrafone.png";
 export default function ProductList() {
   const settings = {
     infinite: true,
-    speed: 5000,
+    speed: 1000,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     initialSlide: 0,
     className: "h-64",
     responsive: [
