@@ -20,7 +20,7 @@
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "@types/react-slick": "^0.23.13",
-    "astro": "^4.5.12",
+    "astro": "^4.8.3",
     "astro-compressor": "^0.4.1",
     "globby": "^14.0.1",
     "gsap": "^3.12.5",
