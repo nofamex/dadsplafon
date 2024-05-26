@@ -51,6 +51,7 @@ We set the language of the page to English and add classes for scrollbar and scr
 
       requestAnimationFrame(raf);
     </script>
+    <!-- Google Ads -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-16563357231"></script>
@@ -62,6 +63,18 @@ We set the language of the page to English and add classes for scrollbar and scr
       gtag("js", new Date());
 
       gtag("config", "AW-16563357231");
+    </script>
+    <!-- Google Analytic -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1519LBJB1"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-V1519LBJB1");
     </script>
   </head>
   <body

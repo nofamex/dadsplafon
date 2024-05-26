@@ -1,9 +1,13 @@
 ---
 // Import the necessary dependencies
-import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
+import ProductList from "@/components/react/ProductList";
+import house1 from "@images/hero/house1.png";
+import house2 from "@images/hero/house2.png";
+import house3 from "@images/hero/house3.png";
+import house4 from "@images/hero/house4.png";
 
 // Define props from Astro
 const {
@@ -18,7 +22,6 @@ const {
   starCount,
   rating,
   reviews,
-  src,
   alt,
 } = Astro.props;
 
@@ -35,14 +38,20 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  src?: any;
   alt?: string;
 }
+
+const products = [
+  { src: house1.src, alt: "house 1" },
+  { src: house2.src, alt: "house 2" },
+  { src: house3.src, alt: "house 3" },
+  { src: house4.src, alt: "house 4" },
+];
 ---
 
 <!-- Defining a grid container that holds all the content -->
 <section
-  class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+  class="mx-auto grid max-w-[85rem] grid-cols-1 gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
 >
   <!-- Title and description -->
   <div>
@@ -84,21 +93,7 @@ interface Props {
       )
     }
   </div>
-  <!-- Hero Image Section -->
-  <div class="flex w-full">
-    <div class="top-12 overflow-hidden">
-      {
-        src && alt && (
-          <Image
-            src={src}
-            alt={alt}
-            class="h-full w-full scale-110 object-cover object-center"
-            draggable={"false"}
-            loading={"eager"}
-            format={"png"}
-          />
-        )
-      }
-    </div>
+  <div class="w-full">
+    <ProductList client:only="react" products={products} slideToShow={1} />
   </div>
 </section>
